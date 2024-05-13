@@ -1,11 +1,13 @@
+import {styles} from "./style"
+
 const Card = (props) => {
     var imagen;
     if(props.imagen){
         imagen = <img src={props.imagen} alt=""></img>
     }
     return (
-            <article>
-                <div>
+            <article style={styles.contenedorTodo}>
+                <div style={styles.contenedorSuperior}>
                     <div>
                         <h4>{props.title}</h4>
                         <p>{props.dondeYCuando}</p>

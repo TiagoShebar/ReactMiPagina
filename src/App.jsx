@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Inicio/>
-      <Card/>
+      <Card title={"YOO"} dondeYCuando={"ayer"} texto={"holaaaaaa"}/>
     </>
     
   );
