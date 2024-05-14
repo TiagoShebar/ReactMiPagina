@@ -1,6 +1,22 @@
-const AcercaDeMi = () => {
+
+const AcercaDeMi = (props) => {
     return (
-        <h2>Hola desde el inicio</h2>
+        <div>
+            <div>
+                <img src={props.image}></img>
+            </div>
+            <div>
+                <div>
+                    <p></p>
+                    <h1></h1>
+                    <p></p>
+                    <div>
+
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
     )
 }
 
