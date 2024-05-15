@@ -3,7 +3,7 @@ const AcercaDeMi = (props) => {
         <div>
             <div>
                 <h2>{props.titulo}</h2>
-                <p>{props.texto2}</p>
+                <p>{props.texto1}</p>
                 <div>
                     <div>{props.textoRowIzquierda1}     {props.textoRowDerecha1}</div>
                     <div>{props.textoRowIzquierda2}     {props.textoRowDerecha2}</div>
@@ -18,3 +18,4 @@ const AcercaDeMi = (props) => {
 }
 
 export default AcercaDeMi;
+

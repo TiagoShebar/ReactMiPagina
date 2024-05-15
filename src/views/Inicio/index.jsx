@@ -7,7 +7,6 @@ const Inicio = (props) => {
             <div>
                 <img src={props.image}></img>
             </div>
-            <div>
                 <div>
                     <p>{props.textoPrimero}</p>
                     <h1>{props.titulo}</h1>
@@ -17,9 +16,9 @@ const Inicio = (props) => {
                     </div>
                     <Button link={props.linkButton} texto={props.textoButton}/>
                 </div>
-            </div>
         </div>
     )
 }
 
 export default Inicio;
+
