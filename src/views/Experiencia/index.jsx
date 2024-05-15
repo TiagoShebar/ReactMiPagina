@@ -1,8 +1,17 @@
+import Card from "../../components/Card";
 
-
-const Experiencia = () => {
+const Experiencia = (props) => {
     return (
-        <h2>Hola desde el inicio</h2>
+        <div>
+            <h2>{props.titulo}</h2>
+            <div>
+                {
+                    props.listaCards.forEach(element => {
+                        return <Card imagen={element.imageCard} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard}/>
+                    })
+                }
+            </div>
+        </div>
     )
 }
 

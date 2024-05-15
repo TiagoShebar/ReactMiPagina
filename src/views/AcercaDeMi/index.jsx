@@ -1,26 +1,17 @@
-import Button from "../../components/Button";
-import IconLink from "../../components/IconLink";
-
 const AcercaDeMi = (props) => {
     return (
         <div>
             <div>
-                <img src={props.image}></img>
+                <h2>{props.titulo}</h2>
+                <p>{props.texto2}</p>
+                <div>
+                    <div>{props.textoRowIzquierda1}     {props.textoRowDerecha1}</div>
+                    <div>{props.textoRowIzquierda2}     {props.textoRowDerecha2}</div>
+                </div>
+                <p>{props.texto2}</p>
             </div>
             <div>
-                <div>
-                    <p>{props.textoPrimero}</p>
-                    <h1>{props.titulo}</h1>
-                    <p>{props.textoSegundo}</p>
-                    <div>
-                        {
-                            props.listaIconLink.forEach(element => {
-                                return <IconLink link={element.link} icon={element.icon} />
-                            })
-                        }
-                    </div>
-                    <Button/>
-                </div>
+                <img src={props.image}></img>
             </div>
         </div>
     )

@@ -10,8 +10,9 @@ import Contacto from "./views/Contacto";
 import AcercaDeMi from "./views/AcercaDeMi";
 
 
-const importImages = (variable, ruta) => {
-  return import(ruta)
+const importImages = (listaRutas) => {
+  listaRutas.forEach(element => {
+    return import(element)
     .then(module => {
       return module.default;
     })
@@ -21,7 +22,9 @@ const importImages = (variable, ruta) => {
     .catch(error => {
       console.error('Error al importar la imagen:', error);
     });
+  });
 };
+
 
 /*let miImagen;
 
@@ -31,6 +34,7 @@ importImages(miImagen, './ruta/de/la/imagen.jpg').then(() => {
 */
 
 function App() {
+  importImages(listaRutas);
   return (
     <>
       <header><NavBar/></header>
@@ -50,3 +54,17 @@ function App() {
 }
 
 export default App;
+
+
+listaRutas = [
+  "./vendor/services/algorithm.svg",
+  "./vendor/services/app-development.svg",
+  "./vendor/services/blockchain.svg",
+  "./vendor/services/full-stack.svg",
+  "./vendor/services/server.svg",
+  "./vendor/services/ui-ux.svg",
+  "./vendor/services/web-programming-chico.svg",
+  "./vendor/services/web-programming-grande.svg",
+  "./vendor/ilustrations/hello3.svg"
+];
+
