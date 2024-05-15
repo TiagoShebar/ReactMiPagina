@@ -16,7 +16,7 @@ const importImages = (variable, ruta) => {
       return module.default;
     })
     .then(image => {
-      return variable = image;
+      return image;
     })
     .catch(error => {
       console.error('Error al importar la imagen:', error);
@@ -35,7 +35,7 @@ function App() {
     <>
       <header><NavBar/></header>
       <main>
-        <Inicio/>
+        <Inicio />
         <AcercaDeMi/>
         <Conocimientos/>
         <Experiencia/>
