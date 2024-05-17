@@ -6,7 +6,7 @@ const FooterComponent = (props) => {
         <div>
             <h4>{props.title}</h4>
             <p>{props.texto}</p>
-            <NavIconLink/>
+            <NavIconLink listaIconLink={props.listaIconLink}/>
             <div>{props.textoDerechos}</div>
         </div>
     )

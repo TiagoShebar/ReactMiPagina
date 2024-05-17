@@ -1,25 +1,16 @@
 import NavLink from "../NavLink"
 
-const listaNavlink = [
-    { link: 'enlace1', texto: 'texto1' },
-    { link: 'enlace2', texto: 'texto2' },
-    { link: 'enlace3', texto: 'texto3' },
-    { link: 'enlace3', texto: 'texto3' },
-    { link: 'enlace3', texto: 'texto3' },
-    { link: 'enlace3', texto: 'texto3' }
-];
-
-const NavBar = () => {
+const NavBar = (props) => {
 
     return (
         <>
             <div>
-                <NavLink link="#" texto="Nombre" />
+                <NavLink link={props.listaNavlink[0].link} texto={props.listaNavlink[0].texto} />
             </div>
 
             <div>
                 {
-                    listaNavlink.forEach(element => {
+                    props.listaNavlink.forEach(element => {
                         return <NavLink link={element.link} texto={element.texto} />
                     })
                 }

@@ -7,7 +7,7 @@ const Conocimientos = (props) => {
             <div>
                 {
                     props.listaImageText.forEach(element => {
-                        return <ImageText link={element.image} icon={element.name} />
+                        return <ImageText image={element.image} name={element.name} />
                     })
                 }
             </div>

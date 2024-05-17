@@ -7,7 +7,7 @@ const Educacion = (props) => {
             <div>
                 {
                     props.listaCards.forEach(element => {
-                        return <Card imagen={element.imageCard} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard}/>
+                        return <Card title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard}/>
                     })
                 }
             </div>
