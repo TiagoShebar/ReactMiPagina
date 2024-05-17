@@ -82,7 +82,8 @@ linkButton
 textoButton
 
 const cargarPropsAcercaDeMi = () => {
-  return {titulo: "Hola! Me llamo Ezequiel Binker.", texto1: "Soy Licenciado en Sistemas recibido en la Universidad de Palermo. Además, hace más de 9 años que trabajo en educación IT, transmitiendo los conceptos de programación a cientos de jóvenes de nivel secundario y terciario.", textoRowIzquierda1: "Edad:", textoRowDerecha1: "29 años", textoRowIzquierda2: "Email:", textoRowDerecha2: "ezebinker@gmail.com", texto2: "Mis conocimientos en educación me permiten comunicar mis pensamientos e intenciones de una manera clara y eficiente. Además, cuento con muchas ganas de participar en proyectos que exploren tecnologías emergentes e innovadoras.", image: listaRutas.binker};
+  const paragraphs = loadFile("infoAcercaDeMi.txt");
+  return {titulo: "Hola! Me llamo Ezequiel Binker.", texto1: paragraphs[0], textoRowIzquierda1: "Edad:", textoRowDerecha1: "29 años", textoRowIzquierda2: "Email:", textoRowDerecha2: "ezebinker@gmail.com", texto2: paragraphs[1], image: listaRutas.binker};
 };
 
 titulo
@@ -99,10 +100,15 @@ const cargarPropsConocimientos = () => {
 };
 
 const cargarPropsExperiencia = () => {
-  return {};
+  const paragraphs = loadFile("cardsExperiencia.txt");
+  return { titulo: "", listaCards: [{imageCard: listaRutas.server, titleCard: "Desarrollador Backend", dondeYCuandoCard: "", textoCard: "" }, ] };
 };
 
+titulo
+listaCards imageCard titleCard dondeYCuandoCard textoCard
+
 const cargarPropsEducacion = () => {
+  const paragraphs = loadFile("cardsEducacion.txt");
   return {};
 };
 
@@ -112,4 +118,27 @@ const cargarPropsCertificaciones = () => {
 
 const cargarPropsContacto = () => {
   return {};
+}
+
+const loadFile = (fileName) => {
+  fetch(fileName)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error(`Could not load file: ${fileName}`);
+          }
+          return response.text();
+      })
+      .then(text => {
+          return processText(text);
+      })
+      .catch(error => {
+          console.error(error);
+      });
+
+}
+
+const processText = (text) => {
+// Divide el contenido por líneas en blanco (párrafos)
+const paragraphs = text.split(/\n\s*\n/).map(paragraph => paragraph.trim());
+return paragraphs;
 }
