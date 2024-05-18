@@ -1,6 +1,6 @@
 import IconLink from "../IconLink";
 
-const IconLink = (props) => {
+const NavIconLink = (props) => {
     return (
         <div>
             {
@@ -12,4 +12,4 @@ const IconLink = (props) => {
     )
 }
 
-export default IconLink;
+export default NavIconLink;

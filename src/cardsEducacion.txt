@@ -6,3 +6,4 @@ Proyecto Final destacado: Desarrollo de una aplicación web PHP para un emprendi
 Tecnologías: Symfony Framework (PHP), MySQL, Amazon Web Services
 
 Proyecto final Destacado: Desarrollo de una aplicación desktop para la creación de partituras musicales utilizando la tecnología de Microsoft Kinect, en el framework .NET .
+
