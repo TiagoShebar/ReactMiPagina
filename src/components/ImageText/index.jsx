@@ -6,7 +6,7 @@ const ImageText = (props) => {
         <>
             <div>
                 <img src={props.image} style={styles.image}></img>
-                <h4>{props.name}</h4>
+                <h5 style={styles.h5}>{props.name}</h5>
             </div>
         </>
     )

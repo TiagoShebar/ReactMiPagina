@@ -14,7 +14,8 @@ export const styles = {
     image: {
         width: "20%",
         height: "auto",
-        overflow: "hidden"
+        overflow: "hidden",
+        justifySelf: "right"
     }
 
 }

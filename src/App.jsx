@@ -130,11 +130,11 @@ const cargarPropsExperiencia = () => {
         titleCard: "Desarrollador Backend",
         dondeYCuandoCard: "Wadiah Capital. (2021-2023)",
         textoCard: `Trabajé durante 2 años en el rediseño funcional del sistema informático de Wadiah Capital. Comencé a cargo de un módulo que realiza una integración con servicios crypto, para luego quedar a cargo del core bancario. El stack de backend utilizado está comprendido por Nest.js (Express) conectado a una base de datos SQL Server. Además, otras herramientas utilizadas durante mi trabajo día a día son : Redis, CircleCI, Docker, Sentry y Azure. Dentro de mis tareas de I+D realicé algunos proyectos crypto, en los cuales puse en práctica conocimientos de Solidity, Pinata Cloud y OpenSea
-        <br>
-        <br>
+        \n
+        \n
         El stack de backend utilizado está comprendido por Nest.js (Express) conectado a una base de datos SQL Server. Además, otras herramientas utilizadas durante mi trabajo día a día son : Redis, CircleCI, Docker, Sentry y Azure.
-        <br>
-        <br>
+        \n
+        \n
         Dentro de mis tareas de I+D realicé algunos proyectos crypto, en los cuales puse en práctica conocimientos de Solidity, Pinata Cloud y OpenSea`
       },
       {
@@ -142,8 +142,8 @@ const cargarPropsExperiencia = () => {
         titleCard: "Desarrollador Full Stack",
         dondeYCuandoCard: "Freelance. (2019-actual)",
         textoCard: `Durante este tiempo, he adquirido experiencia en proyectos personales, tanto en el desarrollo Frontend utilizando tecnologías como HTML, CSS, y React.js, como en el desarrollo Backend empleando TypeScript, Node.js y Nest.js. Además, he incursionado en el desarrollo móvil utilizando React Native.
-        <br>
-        <br>
+        \n
+        \n
         Mis habilidades destacadas se centran en el uso de NestJS y TypeScript, áreas en las que he acumulado experiencia significativa a lo largo de mi trayectoria profesional.`
       },
       {
@@ -151,14 +151,14 @@ const cargarPropsExperiencia = () => {
         titleCard: "Profesor de Informática",
         dondeYCuandoCard: "Escuela ORT. (2016-actual)",
         textoCard: `Mi experiencia docente en ORT Argentina ha sido variada y enriquecedora, desempeñando múltiples roles que han moldeado mi trayectoria en educación informática. En "Taller de Programación", enseño fundamentos en desarrollo informático: desde C# hasta HTML, CSS, Bootstrap, MVC en .NET Core, Dapper ORM y JavaScript para bases de datos y vistas dinámicas.
-        <br>
-        <br>
+        \n
+        \n
         En "Proyectos de Producción", guío a alumnos en la integración de sus conocimientos en un proyecto propio, destacando buenas prácticas de programación, trabajo en equipo, gestión de recursos y metodologías ágiles.
-        <br>
-        <br>
+        \n
+        \n
         Como profesor de Diseño Web, priorizo el enfoque centrado en el usuario, UX, UI y Design Thinking con HTML, CSS para productos digitales significativos.
-        <br>
-        <br>
+        \n
+        \n
         En "Bases de Datos" y "Tecnologías de la Información", complemento el estudio técnico con bases de hardware para soluciones informáticas acordes a las necesidades del cliente.`
       },
       {
@@ -184,7 +184,6 @@ const cargarPropsEducacion = () => {
         titleCard: "Analista de Sistemas",
         dondeYCuandoCard: "Instituto Tecnológico ORT (2013-2017)",
         textoCard: `Proyecto Final destacado: Desarrollo de una aplicación web PHP para un emprendimiento de Yoga y Pilates.
-        <br>
         <br>
         Tecnologías: Symfony Framework (PHP), MySQL, Amazon Web Services`
       },
