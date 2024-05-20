@@ -46,6 +46,7 @@ function App() {
       <header><NavBar navLinkPrincipal={navBar.navLinkPrincipal} listaNavlink={navBar.lista}/></header>
       <main>
         <section id="inicio"><Inicio image={i.image} textoPrimero={i.textoPrimero} titulo={i.titulo} textoSegundo={i.textoSegundo} listaIconLink={i.listaIconLink} linkButton={i.linkButton} textoButton={i.textoButton}/></section>
+        <div class="divImagen"></div>
         <section id="acerca-de-mi"><AcercaDeMi titulo={a.titulo} texto1={a.texto1} textoRowIzquierda1={a.textoRowIzquierda1} textoRowDerecha1={a.textoRowDerecha1} textoRowIzquierda2={a.textoRowIzquierda2} textoRowDerecha2={a.textoRowDerecha2} texto2={a.texto2} image={a.image}/></section>
         <section id="conocimientos"><Conocimientos title={cono.title} listaImageText={cono.listaImageText}/></section>
         <section id="experiencia"><Experiencia titulo={ex.titulo} listaCards={ex.listaCards}/></section>

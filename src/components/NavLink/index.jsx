@@ -1,6 +1,8 @@
+import {styles} from "./style"
+
 const NavLink = (props) => {
     return (
-        <a href={props.link}>{props.texto}</a>
+        <a style={styles.animatedLink} href={props.link}>{props.texto}</a>
     )
 }
 

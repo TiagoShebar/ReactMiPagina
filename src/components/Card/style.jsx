@@ -4,12 +4,17 @@ export const styles = {
         border: "1px solid black",
         display: "flex",
         flexDirection: "column",
-        width: "20%"
+        width: "40%"
     },
     contenedorSuperior: {
         display: "flex",
         flexDirection: "row",
         backgroundColor: "grey"
+    },
+    image: {
+        width: "20%",
+        height: "auto",
+        overflow: "hidden"
     }
 
 }

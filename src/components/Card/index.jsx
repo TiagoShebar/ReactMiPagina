@@ -3,7 +3,7 @@ import {styles} from "./style"
 const Card = (props) => {
     var imagen;
     if(props.imagen){
-        imagen = <img src={props.imagen} alt=""></img>
+        imagen = <img style={styles.image} src={props.imagen} alt=""></img>
     }
     return (
             <article style={styles.contenedorTodo}>
