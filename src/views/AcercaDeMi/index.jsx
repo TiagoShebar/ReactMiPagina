@@ -1,7 +1,9 @@
+import {styles} from "./style"
+
 const AcercaDeMi = (props) => {
     return (
-        <div>
-            <div>
+        <div style={styles.contenedorSuperior}>
+            <div style={styles.contenedorSinImagenSuperior}>
                 <h2>{props.titulo}</h2>
                 <p>{props.texto1}</p>
                 <div>
@@ -11,7 +13,7 @@ const AcercaDeMi = (props) => {
                 <p>{props.texto2}</p>
             </div>
             <div>
-                <img src={props.image}></img>
+                <img src={props.image} style={styles.image}></img>
             </div>
         </div>
     )

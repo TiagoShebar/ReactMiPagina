@@ -1,5 +1,4 @@
 import { Fragment } from "react";
-import React, { useState, useEffect } from 'react';
 import NavBar from "./components/NavBar";
 import Inicio from "./views/Inicio";
 import AcercaDeMi from "./views/AcercaDeMi";
@@ -9,62 +8,30 @@ import Educacion from "./views/Educacion";
 import Certificaciones from "./views/Certificaciones";
 import Contacto from "./views/Contacto";
 import FooterComponent from "./components/FooterComponent";
+import algorithm from "./vendor/services/algorithm.svg";
+import app_development from "./vendor/services/app-development.svg";
+import blockchain from "./vendor/services/blockchain.svg";
+import full_stack from "./vendor/services/full-stack.svg";
+import server from "./vendor/services/server.svg";
+import ui_ux from "./vendor/services/ui-ux.svg";
+import web_programming from "./vendor/services/web-programming-grande.svg";
+import binker from "./vendor/services/binker.png";
+import hello from "./vendor/ilustrations/hello3.svg";
 
 
 const listaRutas = {
-  algorithm: "./vendor/services/algorithm.svg",
-  app_development: "./vendor/services/app-development.svg",
-  blockchain: "./vendor/services/blockchain.svg",
-  full_stack: "./vendor/services/full-stack.svg",
-  server: "./vendor/services/server.svg",
-  ui_ux: "./vendor/services/ui-ux.svg",
-  web_programming_chico: "./vendor/services/web-programming-chico.svg",
-  web_programming_grande: "./vendor/services/web-programming-grande.svg",
-  binker: "./vendor/services/binker.png",
-  hello: "./vendor/ilustrations/hello3.svg"
+  algorithm,
+  app_development,
+  blockchain,
+  full_stack,
+  server,
+  ui_ux,
+  web_programming,
+  binker,
+  hello
 };
-
-const importImages = () => {
-  const promises = Object.keys(listaRutas).map(key => {
-    const ruta = listaRutas[key];
-    return import(ruta)
-      .then(module => {
-        return { [key]: module.default };
-      })
-      .catch(error => {
-        console.error(`Error al importar la imagen ${key}:`, error);
-        return { [key]: null }; // Maneja el error devolviendo null para la imagen que falló
-      });
-  });
-
-  return Promise.all(promises)
-    .then(results => {
-      // Combina los resultados en un solo objeto
-      return results.reduce((acc, curr) => {
-        return { ...acc, ...curr };
-      }, {});
-    })
-    .catch(error => {
-      console.error('Error al importar las imágenes:', error);
-    });
-};
-
-
-/*let miImagen;
-
-importImages(miImagen, './ruta/de/la/imagen.jpg').then(() => {
-  console.log('Imagen importada:', miImagen);
-});
-*/
 
 function App() {
-  const [images, setImages] = React.useState({});
-
-  React.useEffect(() => {
-    importImages().then(importedImages => {
-      setImages(importedImages);
-    });
-  }, []);
   const navBar = cargarNavBar();
   const i = cargarPropsInicio();
   const a = cargarPropsAcercaDeMi();
@@ -76,17 +43,16 @@ function App() {
   const footerComponent = cargarFooterComponent();
   return (
     <>
-      <header><NavBar listaNavlink={navBar}/></header>
+      <header><NavBar navLinkPrincipal={navBar.navLinkPrincipal} listaNavlink={navBar.lista}/></header>
       <main>
-        <Inicio image={i.image} textoPrimero={i.textoPrimero} titulo={i.titulo} textoSegundo={i.textoSegundo} listaIconLink={i.listaIconLink} linkButton={i.linkButton} textoButton={i.textoButton}/>
-        <AcercaDeMi titulo={a.titulo} texto1={a.texto1} textoRowIzquierda1={a.textoRowIzquierda1} textoRowDerecha1={a.textoRowDerecha1} textoRowIzquierda2={a.textoRowIzquierda2} textoRowDerecha2={a.textoRowDerecha2} texto2={a.texto2} image={a.image}/>
-        <Conocimientos title={cono.title} listaImageText={cono.listaImageText}/>
-        <Experiencia titulo={ex.titulo} listaCards={ex.listaCards}/>
-        <Educacion titulo={ed.title} listaCards={ed.listaCards}/>
-        <Certificaciones imageModal={ce.imageModal}/>
-        <Contacto title={cont.title} h5title={cont.h5title} texto1={cont.texto1} texto2={cont.texto2} textoRowIzquierda={cont.textoRowIzquierda} textoRowDerecha={cont.textoRowDerecha}/>
+        <section id="inicio"><Inicio image={i.image} textoPrimero={i.textoPrimero} titulo={i.titulo} textoSegundo={i.textoSegundo} listaIconLink={i.listaIconLink} linkButton={i.linkButton} textoButton={i.textoButton}/></section>
+        <section id="acerca-de-mi"><AcercaDeMi titulo={a.titulo} texto1={a.texto1} textoRowIzquierda1={a.textoRowIzquierda1} textoRowDerecha1={a.textoRowDerecha1} textoRowIzquierda2={a.textoRowIzquierda2} textoRowDerecha2={a.textoRowDerecha2} texto2={a.texto2} image={a.image}/></section>
+        <section id="conocimientos"><Conocimientos title={cono.title} listaImageText={cono.listaImageText}/></section>
+        <section id="experiencia"><Experiencia titulo={ex.titulo} listaCards={ex.listaCards}/></section>
+        <section id="educacion"><Educacion titulo={ed.title} listaCards={ed.listaCards}/></section>
+        <section id="contacto"><Contacto title={cont.title} h5title={cont.h5title} texto1={cont.texto1} texto2={cont.texto2} textoRowIzquierda={cont.textoRowIzquierda} textoRowDerecha={cont.textoRowDerecha}/></section>
       </main>
-      <footer><FooterComponent props={footerComponent}/></footer>
+      <footer><FooterComponent title={footerComponent.title} texto={footerComponent.texto} listaIconLink={footerComponent.listaIconLink} textoDerechos={footerComponent.textoDerechos}/></footer>
     </>
     
   );
@@ -98,19 +64,20 @@ export default App;
 
 
 const cargarNavBar = () => {
-  return [
-    { link: '#', texto: 'Ezequiel Binker' },
-    { link: '#', texto: 'Acerca de Mí' },
-    { link: '#', texto: 'Conocimientos' },
-    { link: '#', texto: 'Experiencia' },
-    { link: '#', texto: 'Educación' },
-    { link: '#', texto: 'Certificaciones' },
-    { link: '#', texto: 'Contacto' }
-  ];
+  return {
+    lista: [
+      { link: '#acerca-de-mi', texto: 'Acerca de Mí' },
+      { link: '#conocimientos', texto: 'Conocimientos' },
+      { link: '#experiencia', texto: 'Experiencia' },
+      { link: '#educacion', texto: 'Educación' },
+      { link: '#certificaciones', texto: 'Certificaciones' },
+      { link: '#contacto', texto: 'Contacto' }
+    ],
+   navLinkPrincipal: { link: '#inicio', texto: 'Ezequiel Binker' }};
 };
 
 const listaIconLink = () => {
-  return [{ link: "#", icon: "#" }, { link: "#", icon: "#" }, { link: "#", icon: "#" }];
+  return [{ link: "#", icon: "a" }, { link: "#", icon: "a" }, { link: "#", icon: "a" }];
 };
 
 const cargarPropsInicio = () => {
@@ -145,7 +112,7 @@ const cargarPropsConocimientos = () => {
   return {
     title: "Conocimientos",
     listaImageText: [
-      { image: listaRutas.web_programming_grande, name: "Desarrollo Web" },
+      { image: listaRutas.web_programming, name: "Desarrollo Web" },
       { image: listaRutas.app_development, name: "Desarrollo Móvil" },
       { image: listaRutas.blockchain, name: "Blockchain & Criptomonedas" },
       { image: listaRutas.ui_ux, name: "UX/UI" }
@@ -179,7 +146,7 @@ const cargarPropsExperiencia = () => {
         Mis habilidades destacadas se centran en el uso de NestJS y TypeScript, áreas en las que he acumulado experiencia significativa a lo largo de mi trayectoria profesional.`
       },
       {
-        imageCard: listaRutas.web_programming_chico,
+        imageCard: listaRutas.web_programming,
         titleCard: "Profesor de Informática",
         dondeYCuandoCard: "Escuela ORT. (2016-actual)",
         textoCard: `Mi experiencia docente en ORT Argentina ha sido variada y enriquecedora, desempeñando múltiples roles que han moldeado mi trayectoria en educación informática. En "Taller de Programación", enseño fundamentos en desarrollo informático: desde C# hasta HTML, CSS, Bootstrap, MVC en .NET Core, Dapper ORM y JavaScript para bases de datos y vistas dinámicas.
@@ -230,7 +197,7 @@ const cargarPropsEducacion = () => {
 };
 
 const cargarPropsCertificaciones = () => {
-  return {};
+  //return {//<Certificaciones imageModal={ce.imageModal}/>};
 };
 
 const cargarPropsContacto = () => {

@@ -1,21 +1,22 @@
 import NavLink from "../NavLink"
+import {styles} from "./style"
 
 const NavBar = (props) => {
 
     return (
-        <>
+        <div style={styles.contenedorSuperior}>
             <div>
-                <NavLink link={props.listaNavlink[0].link} texto={props.listaNavlink[0].texto} />
+                <NavLink link={props.navLinkPrincipal.link} texto={props.navLinkPrincipal.texto} />
             </div>
 
             <div>
                 {
-                    props.listaNavlink.forEach(element => {
-                        return <NavLink link={element.link} texto={element.texto} />
-                    })
+                    (props.listaNavlink || []).map((element, index) => (
+                        <NavLink key={index} link={element.link} texto={element.texto} />
+                    ))
                 }
             </div>
-        </>
+        </div>
     )
 }
 

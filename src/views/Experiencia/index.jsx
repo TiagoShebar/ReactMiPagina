@@ -6,9 +6,9 @@ const Experiencia = (props) => {
             <h2>{props.titulo}</h2>
             <div>
                 {
-                    props.listaCards.forEach(element => {
-                        return <Card imagen={element.imageCard} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard}/>
-                    })
+                    (props.listaCards || []).map((element, index) => (
+                        <Card key={index} imagen={element.imageCard} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard}/>
+                    ))
                 }
             </div>
         </div>

@@ -16,7 +16,9 @@ const Form = (props) => {
                 <label for="mensaje">Mensaje</label>
                 <textarea name="mensaje" id="mensaje" required></textarea>
             </div>
-            <input type="submit"><Button link={props.linkButton} texto={props.textoButton}/></input>
+            <button type="submit">
+                <Button link={props.linkButton} texto={props.textoButton} />
+            </button>
         </form>
     )
 }

@@ -2,6 +2,7 @@ import Button from "../../components/Button";
 import NavIconLink from "../../components/NavIconLink"
 
 const Inicio = (props) => {
+    console.log(props.listaIconLink);
     return (
         <div>
             <div>
