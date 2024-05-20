@@ -18,7 +18,6 @@ import web_programming from "./vendor/services/web-programming-grande.svg";
 import binker from "./vendor/services/binker.png";
 import hello from "./vendor/ilustrations/hello3.svg";
 
-
 const listaRutas = {
   algorithm,
   app_development,
@@ -32,19 +31,10 @@ const listaRutas = {
 };
 
 function App() {
-  const navBar = cargarNavBar();
-  const i = cargarPropsInicio();
-  const a = cargarPropsAcercaDeMi();
-  const cono = cargarPropsConocimientos();
-  const ex = cargarPropsExperiencia();
-  const ed = cargarPropsEducacion();
-  const ce = cargarPropsCertificaciones();
-  const cont = cargarPropsContacto();
-  const footerComponent = cargarFooterComponent();
   return (
     <>
       <header><NavBar navLinkPrincipal={navBar.navLinkPrincipal} listaNavlink={navBar.lista}/></header>
-      <main>
+      <main style={{paddingTop: "7.5vh"}}>
         <section id="inicio"><Inicio image={i.image} textoPrimero={i.textoPrimero} titulo={i.titulo} textoSegundo={i.textoSegundo} listaIconLink={i.listaIconLink} linkButton={i.linkButton} textoButton={i.textoButton}/></section>
         <div class="divImagen"></div>
         <section id="acerca-de-mi"><AcercaDeMi titulo={a.titulo} texto1={a.texto1} textoRowIzquierda1={a.textoRowIzquierda1} textoRowDerecha1={a.textoRowDerecha1} textoRowIzquierda2={a.textoRowIzquierda2} textoRowDerecha2={a.textoRowDerecha2} texto2={a.texto2} image={a.image}/></section>
@@ -64,8 +54,7 @@ function App() {
 export default App;
 
 
-const cargarNavBar = () => {
-  return {
+const navBar = {
     lista: [
       { link: '#acerca-de-mi', texto: 'Acerca de Mí' },
       { link: '#conocimientos', texto: 'Conocimientos' },
@@ -74,29 +63,24 @@ const cargarNavBar = () => {
       { link: '#certificaciones', texto: 'Certificaciones' },
       { link: '#contacto', texto: 'Contacto' }
     ],
-   navLinkPrincipal: { link: '#inicio', texto: 'Ezequiel Binker' }};
+   navLinkPrincipal: { link: '#inicio', texto: 'Ezequiel Binker' }
 };
 
-const listaIconLink = () => {
-  return [{ link: "#", icon: "a" }, { link: "#", icon: "a" }, { link: "#", icon: "a" }];
-};
+const listaIconLink = [{ link: "#", icon: "a" }, { link: "#", icon: "a" }, { link: "#", icon: "a" }];
 
-const cargarPropsInicio = () => {
-  const iconLinks = listaIconLink();
-  return {
+
+const i = {
     image: listaRutas.hello,
     textoPrimero: "HOLA!",
     titulo: "Soy Ezequiel Binker",
     textoSegundo: "Licenciado en Sistemas y Profesor de Programación",
-    listaIconLink: iconLinks,
+    listaIconLink: listaIconLink,
     linkButton: "#",
     textoButton: "Contactame!=>"
-  };
 };
 
 
-const cargarPropsAcercaDeMi = () => {
-  return {
+const a = {
     titulo: "Hola! Me llamo Ezequiel Binker.",
     texto1: "Soy Licenciado en Sistemas recibido en la Universidad de Palermo. Además, hace más de 9 años que trabajo en educación IT, transmitiendo los conceptos de programación a cientos de jóvenes de nivel secundario y terciario.",
     textoRowIzquierda1: "Edad:",
@@ -105,12 +89,9 @@ const cargarPropsAcercaDeMi = () => {
     textoRowDerecha2: "ezebinker@gmail.com",
     texto2: "Mis conocimientos en educación me permiten comunicar mis pensamientos e intenciones de una manera clara y eficiente. Además, cuento con muchas ganas de participar en proyectos que exploren tecnologías emergentes e innovadoras.",
     image: listaRutas.binker
-  };
-  
 };
 
-const cargarPropsConocimientos = () => {
-  return {
+const cono = {
     title: "Conocimientos",
     listaImageText: [
       { image: listaRutas.web_programming, name: "Desarrollo Web" },
@@ -118,11 +99,9 @@ const cargarPropsConocimientos = () => {
       { image: listaRutas.blockchain, name: "Blockchain & Criptomonedas" },
       { image: listaRutas.ui_ux, name: "UX/UI" }
     ]
-  };
 };
 
-const cargarPropsExperiencia = () => {
-  return {
+const ex = {
     titulo: "Experiencia Laboral",
     listaCards: [
       {
@@ -130,8 +109,8 @@ const cargarPropsExperiencia = () => {
         titleCard: "Desarrollador Backend",
         dondeYCuandoCard: "Wadiah Capital. (2021-2023)",
         textoCard: `Trabajé durante 2 años en el rediseño funcional del sistema informático de Wadiah Capital. Comencé a cargo de un módulo que realiza una integración con servicios crypto, para luego quedar a cargo del core bancario. El stack de backend utilizado está comprendido por Nest.js (Express) conectado a una base de datos SQL Server. Además, otras herramientas utilizadas durante mi trabajo día a día son : Redis, CircleCI, Docker, Sentry y Azure. Dentro de mis tareas de I+D realicé algunos proyectos crypto, en los cuales puse en práctica conocimientos de Solidity, Pinata Cloud y OpenSea
-        \n
-        \n
+        <br>
+        <br>
         El stack de backend utilizado está comprendido por Nest.js (Express) conectado a una base de datos SQL Server. Además, otras herramientas utilizadas durante mi trabajo día a día son : Redis, CircleCI, Docker, Sentry y Azure.
         \n
         \n
@@ -168,11 +147,9 @@ const cargarPropsExperiencia = () => {
         textoCard: `Impartí conocimientos en el "Taller de Herramientas de Programación", abordando desde algoritmos simples en Java hasta programación orientada a objetos y estructuras de control, preparando a los estudiantes de nivel terciario para comprender las complejidades del desarrollo informático.`
       }
     ]
-  };
 };
 
-const cargarPropsEducacion = () => {
-  return {
+const ed = {
     title: "Educación",
     listaCards: [
       {
@@ -193,30 +170,24 @@ const cargarPropsEducacion = () => {
         textoCard: `Proyecto final Destacado: Desarrollo de una aplicación desktop para la creación de partituras musicales utilizando la tecnología de Microsoft Kinect, en el framework .NET .`
       }
     ]
-  };
 };
 
-const cargarPropsCertificaciones = () => {
+const ce = {
   //return {//<Certificaciones imageModal={ce.imageModal}/>};
 };
 
-const cargarPropsContacto = () => {
-  return {
+const cont = {
     title: "Contacto",
     h5title: "Sigamos en contacto!",
     texto1: "Consultame lo que necesites a través del formulario o enviandome un mail a mi correo personal",
     texto2: "¡Gracias por visitar mi sitio web!",
     textoRowIzquierda: "Email:",
     textoRowDerecha: "ezebinker@gmail.com"
-  };
 };
 
-const cargarFooterComponent = () => {
-  const iconLinks = listaIconLink();
-  return {
+const footerComponent = {
     title: "Ezequiel Binker",
     texto: "Licenciado en Sistemas y Profesor de Programación",
-    listaIconLink: iconLinks,
+    listaIconLink: listaIconLink,
     textoDerechos: "©2024 Ezequiel Binker. Todos los derechos reservados"
-  };
 };

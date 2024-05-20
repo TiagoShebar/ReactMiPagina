@@ -1,10 +1,11 @@
 import Button from "../../components/Button";
 import NavIconLink from "../../components/NavIconLink"
+import {styles} from "./style"
 
 const Inicio = (props) => {
     console.log(props.listaIconLink);
     return (
-        <div>
+        <div style={styles.divSuperior}>
             <div>
                 <img src={props.image}></img>
             </div>

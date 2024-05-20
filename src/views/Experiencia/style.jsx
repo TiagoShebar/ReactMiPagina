@@ -3,13 +3,13 @@ export const styles = {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap",
-        width: "70%",
+        width: "50%",
         margin: "0 auto",
-        justifyContent: "center"
+        justifyContent: "space-around"
     },
     elemento: {
         flexBasis: "calc(50% - 10px)", // 50% del contenedor menos 10px de margen
-        margin: "5px", // Margen para separar los elementos
+        margin: "20%", // Margen para separar los elementos
         boxSizing: "border-box"// Para incluir el margen en el tamaño total
     }
 

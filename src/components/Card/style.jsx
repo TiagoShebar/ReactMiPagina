@@ -4,7 +4,7 @@ export const styles = {
         border: "1px solid black",
         display: "flex",
         flexDirection: "column",
-        width: "40%"
+        width: "60%"
     },
     contenedorSuperior: {
         display: "flex",
@@ -12,7 +12,7 @@ export const styles = {
         backgroundColor: "grey"
     },
     image: {
-        width: "20%",
+        width: "10%",
         height: "auto",
         overflow: "hidden",
         justifySelf: "right"

@@ -1,9 +1,0 @@
-Trabajo Final de Grado : "Bot Docente". Proyecto desarrollado en Python utilizando Telegram Bot API y librerías de IA, como SpaCy y NLTK. Despliegue de un bot conversacional disponible en la plataforma Telegram, como apoyo complementario a la labor docente.
-
-Proyecto Final destacado: Desarrollo de una aplicación web PHP para un emprendimiento de Yoga y Pilates.
-<br>
-<br>
-Tecnologías: Symfony Framework (PHP), MySQL, Amazon Web Services
-
-Proyecto final Destacado: Desarrollo de una aplicación desktop para la creación de partituras musicales utilizando la tecnología de Microsoft Kinect, en el framework .NET .
-
