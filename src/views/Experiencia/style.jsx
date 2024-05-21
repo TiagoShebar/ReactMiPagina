@@ -1,16 +1,23 @@
 export const styles = {
+    contenedorExterior: {
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        width: "70%",
+        margin: "0 auto"
+    },
     contenedorInterior: {
         display: "flex",
         flexDirection: "row",
-        flexWrap: "wrap",
-        width: "50%",
-        margin: "0 auto",
-        justifyContent: "space-around"
+        width: "80%",
+        justifyContent: "space-between",
     },
     elemento: {
         flexBasis: "calc(50% - 10px)", // 50% del contenedor menos 10px de margen
-        margin: "20%", // Margen para separar los elementos
-        boxSizing: "border-box"// Para incluir el margen en el tamaño total
-    }
-
-}
+        boxSizing: "border-box",
+        width: "50%", // Para incluir el margen en el tamaño total
+    },
+    title: {
+        textAlign: "center",
+    },
+};

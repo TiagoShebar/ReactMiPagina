@@ -12,7 +12,9 @@ const Card = (props) => {
                         <h4>{props.title}</h4>
                         <p>{props.dondeYCuando}</p>
                     </div>
-                    {imagen}
+                    <div style={styles.imageContainer}>
+                        {imagen}
+                    </div>
                 </div>
                 <div>
                     <p>{props.texto}</p>

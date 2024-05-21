@@ -189,5 +189,7 @@ const footerComponent = {
     title: "Ezequiel Binker",
     texto: "Licenciado en Sistemas y Profesor de Programación",
     listaIconLink: listaIconLink,
-    textoDerechos: "©2024 Ezequiel Binker. Todos los derechos reservados"
+    textoDerechos: "©2024 Ezequiel Binker. Todos los derechos reservados",
+    linkButton: "#",
+    textoButton: "Enviar"
 };
