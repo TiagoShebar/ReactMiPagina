@@ -1,9 +1,10 @@
 import Card from "../../components/Card";
+import {styles} from "./style";
 
 const Educacion = (props) => {
     return (
         <div>
-            <h2>{props.title}</h2>
+            <h2 style={styles.title}>{props.title}</h2>
             <div>
                 {
                     (props.listaCards || []).map((element, index) => (

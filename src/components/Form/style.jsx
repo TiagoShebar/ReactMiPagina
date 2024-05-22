@@ -1,15 +1,48 @@
 export const styles = {
-    contenedorTodo: {
-        borderRadius: "2px",
-        border: "1px solid black",
-        display: "flex",
-        flexDirection: "column",
-        width: "20%"
+    formContainer: {
+        display: 'flex',
+        flexDirection: 'column',
+        width: '50%',
+        padding: '2em',
+        backgroundColor: '#f1f3f6',
+        borderRadius: '0.5em',
+        boxShadow: '0 0.25em 0.5em rgba(0,0,0,0.1)',
+        margin: "0 auto"
     },
-    contenedorSuperior: {
-        display: "flex",
-        flexDirection: "row",
-        backgroundColor: "grey"
+    inputGroup: {
+        marginBottom: '1em',
+    },
+    label: {
+        marginBottom: '0.5em',
+        fontSize: '1em',
+        fontWeight: 'bold',
+        margin: "0 auto"
+    },
+    input: {
+        width: '100%',
+        padding: '0.75em',
+        border: '1px solid #ccc',
+        borderRadius: '0.25em',
+        fontSize: '1em',
+    },
+    textarea: {
+        width: '100%',
+        padding: '0.75em',
+        border: '1px solid #ccc',
+        borderRadius: '0.25em',
+        fontSize: '1em',
+        height: '150px',
+    },
+    buttonContainer: {
+        display: 'flex',
+    },
+    submitButton: {
+        backgroundColor: '#fdd835',
+        color: '#fff',
+        border: 'none',
+        borderRadius: '1em',
+        padding: '0.75em 1.5em',
+        cursor: 'pointer',
+        fontSize: '1em',
     }
-
-}
+};

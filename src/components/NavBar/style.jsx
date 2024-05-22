@@ -10,8 +10,8 @@ export const styles = {
         justifyContent: "space-around",
         width: "100%",
         height: "7.5vh",
-        backgroundColor: "white",
-        boxShadow: "1px 0.5px 0.5px grey"
+        backgroundColor: "#f4f6f8",
+        boxShadow: "1px 0.5px 0.5px grey",
     },
     contenedorMultiple: {
         display: "flex",

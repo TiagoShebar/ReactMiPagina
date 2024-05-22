@@ -1,27 +1,23 @@
-import {styles} from "./style"
+import { styles } from "./style";
 
 const Card = (props) => {
-    var imagen;
-    if(props.imagen){
-        imagen = <img style={styles.image} src={props.imagen} alt=""></img>
-    }
     return (
-            <article style={styles.contenedorTodo}>
-                <div style={styles.contenedorSuperior}>
-                    <div>
-                        <h4>{props.title}</h4>
-                        <p>{props.dondeYCuando}</p>
-                    </div>
-                    <div style={styles.imageContainer}>
-                        {imagen}
-                    </div>
-                </div>
+        <article style={styles.contenedorTodo}>
+            <div style={styles.contenedorSuperior}>
                 <div>
-                    <p>{props.texto}</p>
+                    <h4 style={styles.title}>{props.title}</h4>
+                    <p style={styles.subtitle}>{props.dondeYCuando}</p>
                 </div>
-            </article>
-    )
-}
+                <div style={styles.imageContainer}>
+                    {props.imagen && <img style={styles.image} src={props.imagen} alt="" />}
+                </div>
+            </div>
+            <div>
+                <p style={styles.texto}>{props.texto}</p>
+            </div>
+        </article>
+    );
+};
 
 export default Card;
 

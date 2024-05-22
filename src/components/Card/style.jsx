@@ -1,27 +1,47 @@
 export const styles = {
     contenedorTodo: {
-        borderRadius: "2px",
-        border: "1px solid black",
-        display: "flex",
-        flexDirection: "column",
-        width: "80%", // 80% del ancho del contenedor padre // Ancho máximo del 30% del viewport width
-        margin: "0 auto", // Centrado horizontal // Espaciado interno del 2% del viewport width
+        borderRadius: "0.5em",
+        boxShadow: "0 0.25em 0.5em rgba(0,0,0,0.1)",
+        backgroundColor: "#fff",
+        width: "80%",
+        maxWidth: "600px",
+        margin: "20px auto",
+        padding: "2em",
+        boxSizing: "border-box",
+        fontFamily: "Arial, sans-serif"
     },
     contenedorSuperior: {
         display: "flex",
         flexDirection: "row",
-        justifyContent: "space-between", // Alinea los elementos al principio y al final del contenedor
-        backgroundColor: "grey",
-        padding: "2vw", // Espaciado interno del 2% del viewport width
+        justifyContent: "space-between",
+        alignItems: "center",
+        marginBottom: "1.5em"
     },
     imageContainer: {
         display: "flex",
-        alignItems: "center", // Alinea verticalmente la imagen en el contenedor
+        alignItems: "center",
+        justifyContent: "center",
+        width: "10vw", // Ancho fijo de la imagen
+        height: "10vw", // Altura fija de la imagen
+        maxWidth: "50px",
+        maxHeight: "50px",
+        overflow: "hidden"
     },
     image: {
-        width: "10%", // 20% del ancho del contenedor para la imagen// Ancho máximo del 10% del viewport width
+        width: "100%",
         height: "auto",
-        marginLeft: "12vw", // Espacio entre la imagen y el contenido de texto del 2% del viewport width
+    },
+    title: {
+        margin: "0",
+        fontSize: "1.5em"
+    },
+    subtitle: {
+        color: "gray",
+        fontSize: "1em",
+        marginBottom: "1em"
+    },
+    texto: {
+        lineHeight: "1.6"
     }
-}
+};
 

@@ -1,24 +1,26 @@
-import {styles} from "./style"
+import { styles } from "./style";
 import Button from "../Button";
 
 const Form = (props) => {
     return (
-        <form>
-            <div>
-                <label for="nombre">Nombre</label>
-                <input type="text" name="nombre" id="nombre" required></input>
+        <form style={styles.formContainer}>
+            <div style={styles.inputGroup}>
+                <label htmlFor="nombre" style={styles.label}>Nombre</label>
+                <input type="text" name="nombre" id="nombre" required style={styles.input}></input>
             </div>
-            <div>
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required></input>
+            <div style={styles.inputGroup}>
+                <label htmlFor="email" style={styles.label}>Email</label>
+                <input type="email" name="email" id="email" required style={styles.input}></input>
             </div>
-            <div>
-                <label for="mensaje">Mensaje</label>
-                <textarea name="mensaje" id="mensaje" required></textarea>
+            <div style={styles.inputGroup}>
+                <label htmlFor="mensaje" style={styles.label}>Mensaje</label>
+                <textarea name="mensaje" id="mensaje" required style={styles.textarea}></textarea>
             </div>
-            <button type="submit">
-                <Button link={props.linkButton} texto={props.textoButton} />
-            </button>
+            <div style={styles.buttonContainer}>
+                <button type="submit" style={styles.submitButton}>
+                    {props.textoButton}
+                </button>
+            </div>
         </form>
     )
 }

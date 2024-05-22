@@ -34,14 +34,13 @@ function App() {
   return (
     <>
       <header><NavBar navLinkPrincipal={navBar.navLinkPrincipal} listaNavlink={navBar.lista}/></header>
-      <main style={{paddingTop: "7.5vh"}}>
-        <section id="inicio"><Inicio image={i.image} textoPrimero={i.textoPrimero} titulo={i.titulo} textoSegundo={i.textoSegundo} listaIconLink={i.listaIconLink} linkButton={i.linkButton} textoButton={i.textoButton}/></section>
-        <div class="divImagen"></div>
-        <section id="acerca-de-mi"><AcercaDeMi titulo={a.titulo} texto1={a.texto1} textoRowIzquierda1={a.textoRowIzquierda1} textoRowDerecha1={a.textoRowDerecha1} textoRowIzquierda2={a.textoRowIzquierda2} textoRowDerecha2={a.textoRowDerecha2} texto2={a.texto2} image={a.image}/></section>
-        <section id="conocimientos"><Conocimientos title={cono.title} listaImageText={cono.listaImageText}/></section>
-        <section id="experiencia"><Experiencia titulo={ex.titulo} listaCards={ex.listaCards}/></section>
-        <section id="educacion"><Educacion titulo={ed.title} listaCards={ed.listaCards}/></section>
-        <section id="contacto"><Contacto title={cont.title} h5title={cont.h5title} texto1={cont.texto1} texto2={cont.texto2} textoRowIzquierda={cont.textoRowIzquierda} textoRowDerecha={cont.textoRowDerecha}/></section>
+      <main>
+        <section style={{paddingTop: "7.75vh"}} id="inicio"><Inicio image={i.image} textoPrimero={i.textoPrimero} titulo={i.titulo} textoSegundo={i.textoSegundo} listaIconLink={i.listaIconLink} linkButton={i.linkButton} textoButton={i.textoButton}/></section>
+        <section style={{paddingTop: "8.5vh"}} id="acerca-de-mi"><AcercaDeMi titulo={a.titulo} texto1={a.texto1} textoRowIzquierda1={a.textoRowIzquierda1} textoRowDerecha1={a.textoRowDerecha1} textoRowIzquierda2={a.textoRowIzquierda2} textoRowDerecha2={a.textoRowDerecha2} texto2={a.texto2} image={a.image}/></section>
+        <section style={{paddingTop: "8.5vh"}} id="conocimientos"><Conocimientos title={cono.title} listaImageText={cono.listaImageText}/></section>
+        <section style={{paddingTop: "8.5vh"}} id="experiencia"><Experiencia titulo={ex.titulo} listaCards={ex.listaCards}/></section>
+        <section style={{paddingTop: "8.5vh"}} id="educacion"><Educacion title={ed.title} listaCards={ed.listaCards}/></section>
+        <section style={{paddingTop: "8.5vh"}} id="contacto"><Contacto title={cont.title} h5title={cont.h5title} texto1={cont.texto1} texto2={cont.texto2} textoRowIzquierda={cont.textoRowIzquierda} textoRowDerecha={cont.textoRowDerecha}/></section>
       </main>
       <footer><FooterComponent title={footerComponent.title} texto={footerComponent.texto} listaIconLink={footerComponent.listaIconLink} textoDerechos={footerComponent.textoDerechos}/></footer>
     </>
