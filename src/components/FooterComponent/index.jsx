@@ -1,12 +1,10 @@
 import {styles} from "./style";
-import NavIconLink from "../NavIconLink";
 
 const FooterComponent = (props) => {
     return (
-        <div>
+        <div style={{backgroundColor: "#F6DCAC", marginTop: "-15%", paddingTop: "17.5%", textAlign: "center"}}>
             <h4>{props.title}</h4>
             <p>{props.texto}</p>
-            <NavIconLink listaIconLink={props.listaIconLink}/>
             <div>{props.textoDerechos}</div>
         </div>
     )

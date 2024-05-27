@@ -4,7 +4,8 @@ export const styles = {
         flexDirection: "column",
         alignItems: "center",
         width: "70%",
-        margin: "0 auto"
+        margin: "0 auto",
+        paddingTop: "2%"
     },
     contenedorInterior: {
         display: "flex",
@@ -21,5 +22,6 @@ export const styles = {
     },
     title: {
         textAlign: "center",
+        color: "white"
     },
 };

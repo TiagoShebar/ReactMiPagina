@@ -5,7 +5,6 @@ import AcercaDeMi from "./views/AcercaDeMi";
 import Conocimientos from "./views/Conocimientos";
 import Experiencia from "./views/Experiencia";
 import Educacion from "./views/Educacion";
-import Certificaciones from "./views/Certificaciones";
 import Contacto from "./views/Contacto";
 import FooterComponent from "./components/FooterComponent";
 import algorithm from "./vendor/services/algorithm.svg";
@@ -14,9 +13,11 @@ import blockchain from "./vendor/services/blockchain.svg";
 import full_stack from "./vendor/services/full-stack.svg";
 import server from "./vendor/services/server.svg";
 import ui_ux from "./vendor/services/ui-ux.svg";
-import web_programming from "./vendor/services/web-programming-grande.svg";
+import web_programming from "./vendor/services/web-programming.svg";
 import binker from "./vendor/services/binker.png";
 import hello from "./vendor/ilustrations/hello3.svg";
+import "./App.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const listaRutas = {
   algorithm,
@@ -33,16 +34,16 @@ const listaRutas = {
 function App() {
   return (
     <>
-      <header><NavBar navLinkPrincipal={navBar.navLinkPrincipal} listaNavlink={navBar.lista}/></header>
+      <header style={{backgroundColor: "#F6DCAC"}}><NavBar navLinkPrincipal={navBar.navLinkPrincipal} listaNavlink={navBar.lista}/></header>
       <main>
-        <section style={{paddingTop: "7.75vh"}} id="inicio"><Inicio image={i.image} textoPrimero={i.textoPrimero} titulo={i.titulo} textoSegundo={i.textoSegundo} listaIconLink={i.listaIconLink} linkButton={i.linkButton} textoButton={i.textoButton}/></section>
-        <section style={{paddingTop: "8.5vh"}} id="acerca-de-mi"><AcercaDeMi titulo={a.titulo} texto1={a.texto1} textoRowIzquierda1={a.textoRowIzquierda1} textoRowDerecha1={a.textoRowDerecha1} textoRowIzquierda2={a.textoRowIzquierda2} textoRowDerecha2={a.textoRowDerecha2} texto2={a.texto2} image={a.image}/></section>
-        <section style={{paddingTop: "8.5vh"}} id="conocimientos"><Conocimientos title={cono.title} listaImageText={cono.listaImageText}/></section>
-        <section style={{paddingTop: "8.5vh"}} id="experiencia"><Experiencia titulo={ex.titulo} listaCards={ex.listaCards}/></section>
-        <section style={{paddingTop: "8.5vh"}} id="educacion"><Educacion title={ed.title} listaCards={ed.listaCards}/></section>
-        <section style={{paddingTop: "8.5vh"}} id="contacto"><Contacto title={cont.title} h5title={cont.h5title} texto1={cont.texto1} texto2={cont.texto2} textoRowIzquierda={cont.textoRowIzquierda} textoRowDerecha={cont.textoRowDerecha}/></section>
+        <section className="views" id="inicio"><Inicio image={i.image} textoPrimero={i.textoPrimero} titulo={i.titulo} textoSegundo={i.textoSegundo} linkButton={i.linkButton} textoButton={i.textoButton}/></section>
+        <section className="views" id="acerca-de-mi"><AcercaDeMi titulo={a.titulo} texto1={a.texto1} textoRowIzquierda1={a.textoRowIzquierda1} textoRowDerecha1={a.textoRowDerecha1} textoRowIzquierda2={a.textoRowIzquierda2} textoRowDerecha2={a.textoRowDerecha2} texto2={a.texto2} image={a.image}/></section>
+        <section className="views" id="conocimientos"><Conocimientos title={cono.title} listaImageText={cono.listaImageText}/></section>
+        <section className="views" id="experiencia"><Experiencia titulo={ex.titulo} listaCards={ex.listaCards}/></section>
+        <section className="views" id="educacion"><Educacion title={ed.title} listaCards={ed.listaCards}/></section>
+        <section className="views" id="contacto"><Contacto title={cont.title} h5title={cont.h5title} texto1={cont.texto1} texto2={cont.texto2} textoRowIzquierda={cont.textoRowIzquierda} textoRowDerecha={cont.textoRowDerecha}/></section>
       </main>
-      <footer><FooterComponent title={footerComponent.title} texto={footerComponent.texto} listaIconLink={footerComponent.listaIconLink} textoDerechos={footerComponent.textoDerechos}/></footer>
+      <footer><FooterComponent title={footerComponent.title} texto={footerComponent.texto} textoDerechos={footerComponent.textoDerechos}/></footer>
     </>
     
   );
@@ -59,21 +60,17 @@ const navBar = {
       { link: '#conocimientos', texto: 'Conocimientos' },
       { link: '#experiencia', texto: 'Experiencia' },
       { link: '#educacion', texto: 'Educación' },
-      { link: '#certificaciones', texto: 'Certificaciones' },
       { link: '#contacto', texto: 'Contacto' }
     ],
    navLinkPrincipal: { link: '#inicio', texto: 'Ezequiel Binker' }
 };
-
-const listaIconLink = [{ link: "#", icon: "a" }, { link: "#", icon: "a" }, { link: "#", icon: "a" }];
 
 
 const i = {
     image: listaRutas.hello,
     textoPrimero: "HOLA!",
     titulo: "Soy Ezequiel Binker",
-    textoSegundo: "Licenciado en Sistemas y Profesor de Programación",
-    listaIconLink: listaIconLink,
+    textoSegundo: "Licenciado en Sistemas y Profesor de Programación",   
     linkButton: "#",
     textoButton: "Contactame!=>"
 };
@@ -187,7 +184,6 @@ const cont = {
 const footerComponent = {
     title: "Ezequiel Binker",
     texto: "Licenciado en Sistemas y Profesor de Programación",
-    listaIconLink: listaIconLink,
     textoDerechos: "©2024 Ezequiel Binker. Todos los derechos reservados",
     linkButton: "#",
     textoButton: "Enviar"

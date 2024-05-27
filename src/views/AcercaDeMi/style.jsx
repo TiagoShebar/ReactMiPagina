@@ -12,7 +12,8 @@ export const styles = {
         flexDirection: "row",
         justifyContent: "space-between",
         margin: "0 auto",
-        width: "60%"
+        width: "60%",
+        paddingTop: "2%"
     },
     image: {
         borderRadius: "50%",

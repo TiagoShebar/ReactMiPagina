@@ -4,6 +4,7 @@ import {styles} from "./style"
 const NavBar = (props) => {
 
     return (
+        <div style={{backgroundColor: "#F6DCAC"}}>
         <div style={styles.contenedorSuperior}>
             <div style={styles.contenedorUnico}>
                 <NavLink link={props.navLinkPrincipal.link} texto={props.navLinkPrincipal.texto} />
@@ -16,6 +17,7 @@ const NavBar = (props) => {
                     ))
                 }
             </div>
+        </div>
         </div>
     )
 }

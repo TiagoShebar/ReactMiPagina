@@ -1,5 +1,6 @@
 export const styles = {
     title: {
-        textAlign: "center"
+        textAlign: "center",
+        color: "white"
     }
 }

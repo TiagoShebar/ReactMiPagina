@@ -8,7 +8,8 @@ export const styles = {
         textAlign: "center"
     },
     contenedorSuperior: {
-        textAlign: "center"
+        textAlign: "center",
+        paddingTop: "2%"
     },
     image: {
         width: "50px",

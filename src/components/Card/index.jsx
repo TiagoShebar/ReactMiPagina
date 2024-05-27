@@ -13,6 +13,7 @@ const Card = (props) => {
                 </div>
             </div>
             <div>
+                
                 <p style={styles.texto}>{props.texto}</p>
             </div>
         </article>
