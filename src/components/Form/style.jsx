@@ -35,14 +35,5 @@ export const styles = {
     },
     buttonContainer: {
         display: 'flex',
-    },
-    submitButton: {
-        backgroundColor: '#fdd835',
-        color: '#fff',
-        border: 'none',
-        borderRadius: '1em',
-        padding: '0.75em 1.5em',
-        cursor: 'pointer',
-        fontSize: '1em',
     }
 };

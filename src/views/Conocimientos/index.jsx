@@ -12,7 +12,7 @@ const Conocimientos = (props) => {
                     (props.listaImageText || []).map((element, index) => (
                         <ImageText key={index} image={element.image} name={element.name}/>
                     ))
-                }
+                }   
             </div>
         </div>
         </div>

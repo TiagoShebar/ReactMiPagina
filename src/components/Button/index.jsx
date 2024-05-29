@@ -1,6 +1,8 @@
+import { styles } from "./style";
+
 const Button = (props) => {
     return (
-        <a href={props.link}>{props.texto}</a>
+        <button style={styles.button} href={props.link}><b>{props.texto}</b></button>
     )
 }
 

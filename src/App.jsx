@@ -13,11 +13,11 @@ import blockchain from "./vendor/services/blockchain.svg";
 import full_stack from "./vendor/services/full-stack.svg";
 import server from "./vendor/services/server.svg";
 import ui_ux from "./vendor/services/ui-ux.svg";
-import web_programming from "./vendor/services/web-programming.svg";
+import web_programming_white from "./vendor/services/web-programming-white.svg";
+import web_programming_black from "./vendor/services/web-programming-black.svg";
 import binker from "./vendor/services/binker.png";
 import hello from "./vendor/ilustrations/hello3.svg";
 import "./App.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const listaRutas = {
   algorithm,
@@ -26,7 +26,8 @@ const listaRutas = {
   full_stack,
   server,
   ui_ux,
-  web_programming,
+  web_programming_white,
+  web_programming_black,
   binker,
   hello
 };
@@ -90,7 +91,7 @@ const a = {
 const cono = {
     title: "Conocimientos",
     listaImageText: [
-      { image: listaRutas.web_programming, name: "Desarrollo Web" },
+      { image: listaRutas.web_programming_white, name: "Desarrollo Web" },
       { image: listaRutas.app_development, name: "Desarrollo Móvil" },
       { image: listaRutas.blockchain, name: "Blockchain & Criptomonedas" },
       { image: listaRutas.ui_ux, name: "UX/UI" }
@@ -122,7 +123,7 @@ const ex = {
         Mis habilidades destacadas se centran en el uso de NestJS y TypeScript, áreas en las que he acumulado experiencia significativa a lo largo de mi trayectoria profesional.`
       },
       {
-        imageCard: listaRutas.web_programming,
+        imageCard: listaRutas.web_programming_black,
         titleCard: "Profesor de Informática",
         dondeYCuandoCard: "Escuela ORT. (2016-actual)",
         textoCard: `Mi experiencia docente en ORT Argentina ha sido variada y enriquecedora, desempeñando múltiples roles que han moldeado mi trayectoria en educación informática. En "Taller de Programación", enseño fundamentos en desarrollo informático: desde C# hasta HTML, CSS, Bootstrap, MVC en .NET Core, Dapper ORM y JavaScript para bases de datos y vistas dinámicas.
