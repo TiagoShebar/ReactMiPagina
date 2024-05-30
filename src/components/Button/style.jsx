@@ -7,9 +7,6 @@ export const styles = {
         cursor: 'pointer',
         color: '#fff',
         fontSize: '1em'
-    },
-    button:hover {
-        
     }
 }
 

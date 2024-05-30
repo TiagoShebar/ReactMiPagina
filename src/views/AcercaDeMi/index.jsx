@@ -6,7 +6,7 @@ const AcercaDeMi = (props) => {
         <div style={{backgroundColor: "#FEAE6F", marginTop: "-18%", paddingTop: "17.5%", paddingBottom:"5%"}}>
         <div style={styles.contenedorSuperior}>
             <div style={styles.contenedorSinImagenSuperior}>
-                <h2>{props.titulo}</h2>
+                <h2 style={{textAlign: "center", fontSize: "2.3rem", fontWeight: "600"}}>{props.titulo}</h2>
                 <p>{props.texto1}</p>
                 <div>
                     <div>{props.textoRowIzquierda1}     {props.textoRowDerecha1}</div>

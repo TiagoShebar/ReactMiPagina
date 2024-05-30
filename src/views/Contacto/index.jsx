@@ -4,14 +4,14 @@ const Contacto = (props) => {
     return (
         <>
         <div style={{backgroundColor: "#FEAE6F", marginTop: "-18%", paddingTop: "17.5%"}}>
-            <h2 style={{textAlign: "center"}}>{props.title}</h2>
-            <div>
-                <Form/>
-                <div>
-                    <h5>{props.h5title}</h5>
+            <h2 style={{textAlign: "center", fontSize: "2.3rem", fontWeight: "600"}}>{props.title}</h2>
+            <div style={{ display: "flex", justifyContent: "center", width: "80%", margin: "0 auto"}}>
+                <Form textoButton={props.textoButton}/>
+                <div style={{width:"30%", marginLeft: "2%"}}>
+                    <h5 style={{fontSize: "1.3em"}}>{props.h5title}</h5>
                     <p>{props.texto1}</p>
                     <p>{props.texto2}</p>
-                    <div>{props.textoRowIzquierda}     {props.textoRowDerecha}</div>
+                    <div>{props.textoRowIzquierda}     <b>{props.textoRowDerecha}</b></div>
                 </div>
             </div>
             

@@ -6,6 +6,7 @@ export const styles = {
     },
     h5: {
         fontSize: "1.25rem",
+        color: "white"
     }
 
 }

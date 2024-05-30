@@ -6,7 +6,7 @@ const Conocimientos = (props) => {
         <>
         <div style={{backgroundColor: "#028391", marginTop: "-18%", paddingTop: "19%", paddingBottom: "5%"}}>
         <div style={styles.contenedorSuperior}>
-            <h2>{props.title}</h2>
+            <h2 style={{textAlign: "center", fontSize: "2.3rem", fontWeight: "600", color: "white"}}>{props.title}</h2>
             <div style={styles.contenedorInterior}>
                 {
                     (props.listaImageText || []).map((element, index) => (

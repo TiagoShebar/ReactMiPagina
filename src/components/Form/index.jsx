@@ -17,9 +17,7 @@ const Form = (props) => {
                 <textarea name="mensaje" id="mensaje" required style={styles.textarea}></textarea>
             </div>
             <div style={styles.buttonContainer}>
-                <button type="submit" style={styles.submitButton}>
-                    {props.textoButton}
-                </button>
+                <Button type="submit" texto={props.textoButton}/>
             </div>
         </form>
     )

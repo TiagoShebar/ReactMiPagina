@@ -42,7 +42,7 @@ function App() {
         <section className="views" id="conocimientos"><Conocimientos title={cono.title} listaImageText={cono.listaImageText}/></section>
         <section className="views" id="experiencia"><Experiencia titulo={ex.titulo} listaCards={ex.listaCards}/></section>
         <section className="views" id="educacion"><Educacion title={ed.title} listaCards={ed.listaCards}/></section>
-        <section className="views" id="contacto"><Contacto title={cont.title} h5title={cont.h5title} texto1={cont.texto1} texto2={cont.texto2} textoRowIzquierda={cont.textoRowIzquierda} textoRowDerecha={cont.textoRowDerecha}/></section>
+        <section className="views" id="contacto"><Contacto title={cont.title} h5title={cont.h5title} texto1={cont.texto1} texto2={cont.texto2} textoRowIzquierda={cont.textoRowIzquierda} textoRowDerecha={cont.textoRowDerecha} textoButton={cont.textoButton}/></section>
       </main>
       <footer><FooterComponent title={footerComponent.title} texto={footerComponent.texto} textoDerechos={footerComponent.textoDerechos}/></footer>
     </>
@@ -72,7 +72,7 @@ const i = {
     textoPrimero: "HOLA!",
     titulo: "Soy Ezequiel Binker",
     textoSegundo: "Licenciado en Sistemas y Profesor de Programación",   
-    linkButton: "#",
+    linkButton: "#contacto",
     textoButton: "Contactame!=>"
 };
 
@@ -179,7 +179,8 @@ const cont = {
     texto1: "Consultame lo que necesites a través del formulario o enviandome un mail a mi correo personal",
     texto2: "¡Gracias por visitar mi sitio web!",
     textoRowIzquierda: "Email:",
-    textoRowDerecha: "ezebinker@gmail.com"
+    textoRowDerecha: "ezebinker@gmail.com",
+    textoButton: "Enviar"
 };
 
 const footerComponent = {
