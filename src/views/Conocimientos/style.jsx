@@ -5,11 +5,13 @@ export const styles = {
         justifyContent: "space-between",
         width: "50%",
         margin: "0 auto",
-        textAlign: "center"
+        textAlign: "center",
+        marginTop: "5%"
     },
     contenedorSuperior: {
         textAlign: "center",
-        paddingTop: "2%"
+        paddingTop: "2%",
+        marginTop: "-3%"
     },
     image: {
         width: "50px",

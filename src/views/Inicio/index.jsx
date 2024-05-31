@@ -7,13 +7,13 @@ const Inicio = (props) => {
         <>
         <div style={{backgroundColor: "#F6DCAC"}}>
         <div style={styles.divSuperior}>
-            <div>
+            <div style={{marginLeft: "-10%"}}>
                 <img src={props.image}></img>
             </div>
                 <div>
-                    <p>{props.textoPrimero}</p>
-                    <h1>{props.titulo}</h1>
-                    <p>{props.textoSegundo}</p>
+                    <p style={{fontSize: "1.3rem"}}>{props.textoPrimero}</p>
+                    <h1 style={{fontSize: "2.5rem"}}>{props.titulo}</h1>
+                    <p style={{marginBottom: "10%"}}>{props.textoSegundo}</p>
                     <Button link={props.linkButton} texto={props.textoButton}/>
                 </div>
         </div>

@@ -6,17 +6,18 @@ const AcercaDeMi = (props) => {
         <div style={{backgroundColor: "#FEAE6F", marginTop: "-18%", paddingTop: "17.5%", paddingBottom:"5%"}}>
         <div style={styles.contenedorSuperior}>
             <div style={styles.contenedorSinImagenSuperior}>
-                <h2 style={{textAlign: "center", fontSize: "2.3rem", fontWeight: "600"}}>{props.titulo}</h2>
+                <h2 style={{ fontSize: "2rem", fontWeight: "600"}}>{props.titulo}</h2>
                 <p>{props.texto1}</p>
                 <div>
-                    <div>{props.textoRowIzquierda1}     {props.textoRowDerecha1}</div>
-                    <div>{props.textoRowIzquierda2}     {props.textoRowDerecha2}</div>
+                    <div>{props.textoRowIzquierda1}     <b>{props.textoRowDerecha1}</b></div>
+                    <div>{props.textoRowIzquierda2}     <b>{props.textoRowDerecha2}</b></div>
                 </div>
                 <p>{props.texto2}</p>
             </div>
             <div>
                 <img src={props.image} style={styles.image}></img>
             </div>
+            
         </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style={{width:"100%", height: "30vh",  fill: "#FEAE6F"}}>

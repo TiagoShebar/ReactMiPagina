@@ -1,6 +1,7 @@
 import { styles } from "./style";
 
 const Card = (props) => {
+    var parrafo = props.texto.split('<br>');
     return (
         <article style={styles.contenedorTodo}>
             <div style={styles.contenedorSuperior}>
@@ -13,8 +14,9 @@ const Card = (props) => {
                 </div>
             </div>
             <div>
-                
-                <p style={styles.texto}>{props.texto}</p>
+                        {parrafo.map((element, index) => (
+                            <p style={styles.texto}>{element}</p>
+                        ))}
             </div>
         </article>
     );

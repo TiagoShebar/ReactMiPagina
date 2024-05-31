@@ -3,9 +3,10 @@ import Form from "../../components/Form";
 const Contacto = (props) => {
     return (
         <>
-        <div style={{backgroundColor: "#FEAE6F", marginTop: "-18%", paddingTop: "17.5%"}}>
+        <div style={{backgroundColor: "#FEAE6F", marginTop: "-18%", paddingTop: "17.5%", paddingBottom: "7%"}}>
+            <div style={{marginTop: "1%"}}>
             <h2 style={{textAlign: "center", fontSize: "2.3rem", fontWeight: "600"}}>{props.title}</h2>
-            <div style={{ display: "flex", justifyContent: "center", width: "80%", margin: "0 auto"}}>
+            <div style={{ display: "flex", justifyContent: "center", width: "80%", margin: "0 auto", marginTop: "3%"}}>
                 <Form textoButton={props.textoButton}/>
                 <div style={{width:"30%", marginLeft: "2%"}}>
                     <h5 style={{fontSize: "1.3em"}}>{props.h5title}</h5>
@@ -13,6 +14,7 @@ const Contacto = (props) => {
                     <p>{props.texto2}</p>
                     <div>{props.textoRowIzquierda}     <b>{props.textoRowDerecha}</b></div>
                 </div>
+            </div>
             </div>
             
         </div>

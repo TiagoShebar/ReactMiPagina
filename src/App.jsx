@@ -81,7 +81,7 @@ const a = {
     titulo: "Hola! Me llamo Ezequiel Binker.",
     texto1: "Soy Licenciado en Sistemas recibido en la Universidad de Palermo. Además, hace más de 9 años que trabajo en educación IT, transmitiendo los conceptos de programación a cientos de jóvenes de nivel secundario y terciario.",
     textoRowIzquierda1: "Edad:",
-    textoRowDerecha1: "29 años",
+    textoRowDerecha1: calcularEdad('2006-12-21'),
     textoRowIzquierda2: "Email:",
     textoRowDerecha2: "ezebinker@gmail.com",
     texto2: "Mis conocimientos en educación me permiten comunicar mis pensamientos e intenciones de una manera clara y eficiente. Además, cuento con muchas ganas de participar en proyectos que exploren tecnologías emergentes e innovadoras.",
@@ -105,12 +105,10 @@ const ex = {
         imageCard: listaRutas.server,
         titleCard: "Desarrollador Backend",
         dondeYCuandoCard: "Wadiah Capital. (2021-2023)",
-        textoCard: `Trabajé durante 2 años en el rediseño funcional del sistema informático de Wadiah Capital. Comencé a cargo de un módulo que realiza una integración con servicios crypto, para luego quedar a cargo del core bancario. El stack de backend utilizado está comprendido por Nest.js (Express) conectado a una base de datos SQL Server. Además, otras herramientas utilizadas durante mi trabajo día a día son : Redis, CircleCI, Docker, Sentry y Azure. Dentro de mis tareas de I+D realicé algunos proyectos crypto, en los cuales puse en práctica conocimientos de Solidity, Pinata Cloud y OpenSea
-        <br>
+        textoCard: `Trabajé durante 2 años en el rediseño funcional del sistema informático de Wadiah Capital. Comencé a cargo de un módulo que realiza una integración con servicios crypto, para luego quedar a cargo del core bancario.
         <br>
         El stack de backend utilizado está comprendido por Nest.js (Express) conectado a una base de datos SQL Server. Además, otras herramientas utilizadas durante mi trabajo día a día son : Redis, CircleCI, Docker, Sentry y Azure.
-        \n
-        \n
+        <br>
         Dentro de mis tareas de I+D realicé algunos proyectos crypto, en los cuales puse en práctica conocimientos de Solidity, Pinata Cloud y OpenSea`
       },
       {
@@ -118,8 +116,7 @@ const ex = {
         titleCard: "Desarrollador Full Stack",
         dondeYCuandoCard: "Freelance. (2019-actual)",
         textoCard: `Durante este tiempo, he adquirido experiencia en proyectos personales, tanto en el desarrollo Frontend utilizando tecnologías como HTML, CSS, y React.js, como en el desarrollo Backend empleando TypeScript, Node.js y Nest.js. Además, he incursionado en el desarrollo móvil utilizando React Native.
-        \n
-        \n
+        <br>
         Mis habilidades destacadas se centran en el uso de NestJS y TypeScript, áreas en las que he acumulado experiencia significativa a lo largo de mi trayectoria profesional.`
       },
       {
@@ -127,14 +124,11 @@ const ex = {
         titleCard: "Profesor de Informática",
         dondeYCuandoCard: "Escuela ORT. (2016-actual)",
         textoCard: `Mi experiencia docente en ORT Argentina ha sido variada y enriquecedora, desempeñando múltiples roles que han moldeado mi trayectoria en educación informática. En "Taller de Programación", enseño fundamentos en desarrollo informático: desde C# hasta HTML, CSS, Bootstrap, MVC en .NET Core, Dapper ORM y JavaScript para bases de datos y vistas dinámicas.
-        \n
-        \n
+        <br>
         En "Proyectos de Producción", guío a alumnos en la integración de sus conocimientos en un proyecto propio, destacando buenas prácticas de programación, trabajo en equipo, gestión de recursos y metodologías ágiles.
-        \n
-        \n
+        <br>
         Como profesor de Diseño Web, priorizo el enfoque centrado en el usuario, UX, UI y Design Thinking con HTML, CSS para productos digitales significativos.
-        \n
-        \n
+        <br>
         En "Bases de Datos" y "Tecnologías de la Información", complemento el estudio técnico con bases de hardware para soluciones informáticas acordes a las necesidades del cliente.`
       },
       {
@@ -186,7 +180,20 @@ const cont = {
 const footerComponent = {
     title: "Ezequiel Binker",
     texto: "Licenciado en Sistemas y Profesor de Programación",
-    textoDerechos: "©2024 Ezequiel Binker. Todos los derechos reservados",
+    textoDerechos: `©${new Date().getFullYear()} Ezequiel Binker. Todos los derechos reservados`,
     linkButton: "#",
     textoButton: "Enviar"
 };
+
+function calcularEdad(fechaNacimiento) {
+  var hoy = new Date();
+  var cumpleanos = new Date(fechaNacimiento);
+  var edad = hoy.getFullYear() - cumpleanos.getFullYear();
+  var mes = hoy.getMonth() - cumpleanos.getMonth();
+
+  if (mes < 0 || (mes === 0 && hoy.getDate() < cumpleanos.getDate())) {
+      edad--;
+  }
+
+  return edad;
+}

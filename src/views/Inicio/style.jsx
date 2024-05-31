@@ -4,6 +4,8 @@ export const styles = {
         flexDirection: "row",
         justifyContent: "space-between",
         width: "50%",
-        margin: "0 auto"
+        margin: "0 auto",
+        paddingTop: "2%",
+        
     }
 }

@@ -22,8 +22,7 @@ export const styles = {
         alignSelf: "center"
     },
     contenedorSinImagenSuperior: {
-        width: "45%",
-        paddingTop: "20%"
+        width: "45%"
     },
     contenedorConImagenSuperior: {
         width: "45%",

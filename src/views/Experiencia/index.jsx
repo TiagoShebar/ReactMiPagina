@@ -4,7 +4,7 @@ import {styles} from "./style";
 const Experiencia = (props) => {
     return (
         <>
-        <div style={{backgroundColor: "#01204E", marginTop: "-18%", paddingTop: "17.5%"}}>
+        <div style={{backgroundColor: "#01204E", marginTop: "-18%", paddingTop: "17.5%", paddingBottom: "5%"}}>
             <h2 style={styles.title}>{props.titulo}</h2>
             <div style={styles.contenedorExterior}>
                 <div style={styles.contenedorInterior}>

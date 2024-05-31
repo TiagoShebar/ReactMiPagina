@@ -4,16 +4,18 @@ import {styles} from "./style";
 const Educacion = (props) => {
     return (
         <>
-        <div style={{backgroundColor: "#028391", marginTop: "-18%", paddingTop: "18%", paddingBottom:"2%"}}>
-            <div style={{paddingTop: "2%"}}>
-            <h2 style={styles.title}>{props.title}</h2>
-            <div>
-                {
-                    (props.listaCards || []).map((element, index) => (
-                        <Card key={index} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard}/>
-                    ))
-                }
-            </div>
+        <div style={{backgroundColor: "#028391", marginTop: "-18%", paddingTop: "18%", paddingBottom:"7%"}}>
+            <div style={{marginTop: "-1%"}}>
+                <div style={{paddingTop: "2%"}}>
+                <h2 style={styles.title}>{props.title}</h2>
+                <div>
+                    {
+                        (props.listaCards || []).map((element, index) => (
+                            <Card key={index} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard}/>
+                        ))
+                    }
+                </div>
+                </div>
             </div>
         </div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" preserveAspectRatio="none" style={{width:"100%", height: "30vh",  fill: "#028391"}}>
