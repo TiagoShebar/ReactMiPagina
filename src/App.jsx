@@ -15,7 +15,7 @@ import server from "./vendor/services/server.svg";
 import ui_ux from "./vendor/services/ui-ux.svg";
 import web_programming_white from "./vendor/services/web-programming-white.svg";
 import web_programming_black from "./vendor/services/web-programming-black.svg";
-import binker from "./vendor/services/binker.png";
+import noah from "./vendor/services/noah.jpg";
 import hello from "./vendor/ilustrations/hello3.svg";
 import "./App.css"
 
@@ -28,7 +28,7 @@ const listaRutas = {
   ui_ux,
   web_programming_white,
   web_programming_black,
-  binker,
+  noah,
   hello
 };
 
@@ -63,29 +63,29 @@ const navBar = {
       { link: '#educacion', texto: 'Educación' },
       { link: '#contacto', texto: 'Contacto' }
     ],
-   navLinkPrincipal: { link: '#inicio', texto: 'Ezequiel Binker' }
+   navLinkPrincipal: { link: '#inicio', texto: 'Tiago Shebar' }
 };
 
 
 const i = {
     image: listaRutas.hello,
     textoPrimero: "HOLA!",
-    titulo: "Soy Ezequiel Binker",
-    textoSegundo: "Licenciado en Sistemas y Profesor de Programación",   
+    titulo: "Soy Tiago Shebar",
+    textoSegundo: "Estudiante de ORT Yatay",   
     linkButton: "#contacto",
     textoButton: "Contactame!=>"
 };
 
 
 const a = {
-    titulo: "Hola! Me llamo Ezequiel Binker.",
-    texto1: "Soy Licenciado en Sistemas recibido en la Universidad de Palermo. Además, hace más de 9 años que trabajo en educación IT, transmitiendo los conceptos de programación a cientos de jóvenes de nivel secundario y terciario.",
+    titulo: "Hola! Me llamo Tiago Shebar.",
+    texto1: "Soy estudiante de ORT en la especialización en informática en la sede de almagro",
     textoRowIzquierda1: "Edad:",
     textoRowDerecha1: calcularEdad('2006-12-21'),
     textoRowIzquierda2: "Email:",
-    textoRowDerecha2: "ezebinker@gmail.com",
+    textoRowDerecha2: "47699554@est.ort.edu.ar",
     texto2: "Mis conocimientos en educación me permiten comunicar mis pensamientos e intenciones de una manera clara y eficiente. Además, cuento con muchas ganas de participar en proyectos que exploren tecnologías emergentes e innovadoras.",
-    image: listaRutas.binker
+    image: listaRutas.noah
 };
 
 const cono = {
@@ -104,38 +104,28 @@ const ex = {
       {
         imageCard: listaRutas.server,
         titleCard: "Desarrollador Backend",
-        dondeYCuandoCard: "Wadiah Capital. (2021-2023)",
-        textoCard: `Trabajé durante 2 años en el rediseño funcional del sistema informático de Wadiah Capital. Comencé a cargo de un módulo que realiza una integración con servicios crypto, para luego quedar a cargo del core bancario.
-        <br>
-        El stack de backend utilizado está comprendido por Nest.js (Express) conectado a una base de datos SQL Server. Además, otras herramientas utilizadas durante mi trabajo día a día son : Redis, CircleCI, Docker, Sentry y Azure.
-        <br>
-        Dentro de mis tareas de I+D realicé algunos proyectos crypto, en los cuales puse en práctica conocimientos de Solidity, Pinata Cloud y OpenSea`
+        dondeYCuandoCard: "XYZ Solutions (2017-2019)",
+        textoCard: `Durante mi tiempo en XYZ Solutions, mi enfoque estaba en la mejora continua del backend del sistema informático. Desarrollé y optimicé módulos clave para fortalecer la integración con servicios externos y garantizar la seguridad de los datos. Utilicé tecnologías como Node.js y Express para construir una arquitectura sólida, respaldada por una base de datos MySQL para una gestión eficiente de la información. Además, implementé prácticas de integración continua con herramientas como Jenkins y Docker, lo que mejoró significativamente la eficiencia del desarrollo. En proyectos de investigación, exploré aplicaciones de blockchain, aplicando conocimientos en Solidity y Ethereum para impulsar la innovación en soluciones empresariales.`
       },
       {
         imageCard: listaRutas.full_stack,
         titleCard: "Desarrollador Full Stack",
-        dondeYCuandoCard: "Freelance. (2019-actual)",
-        textoCard: `Durante este tiempo, he adquirido experiencia en proyectos personales, tanto en el desarrollo Frontend utilizando tecnologías como HTML, CSS, y React.js, como en el desarrollo Backend empleando TypeScript, Node.js y Nest.js. Además, he incursionado en el desarrollo móvil utilizando React Native.
-        <br>
-        Mis habilidades destacadas se centran en el uso de NestJS y TypeScript, áreas en las que he acumulado experiencia significativa a lo largo de mi trayectoria profesional.`
+        dondeYCuandoCard: "Tech Innovate Solutions (2019-actual):",
+        textoCard: `Como desarrollador Full Stack en Tech Innovate Solutions, he tenido la oportunidad de trabajar en una amplia gama de proyectos desafiantes y estimulantes. Desde mi incorporación en 2019, he colaborado con equipos multifuncionales para desarrollar soluciones innovadoras que abordan las necesidades específicas de nuestros clientes. Utilizando tecnologías punteras como React.js, Node.js y MongoDB, he creado aplicaciones web escalables y receptivas que proporcionan experiencias de usuario excepcionales. Además, he participado en todas las etapas del ciclo de vida del desarrollo de software, desde el diseño y la implementación hasta el despliegue y el mantenimiento. Mi tiempo en Tech Innovate Solutions me ha permitido crecer profesionalmente y ampliar mis habilidades técnicas mientras contribuyo al éxito de proyectos impactantes en el mundo de la tecnología.`
       },
       {
         imageCard: listaRutas.web_programming_black,
-        titleCard: "Profesor de Informática",
-        dondeYCuandoCard: "Escuela ORT. (2016-actual)",
-        textoCard: `Mi experiencia docente en ORT Argentina ha sido variada y enriquecedora, desempeñando múltiples roles que han moldeado mi trayectoria en educación informática. En "Taller de Programación", enseño fundamentos en desarrollo informático: desde C# hasta HTML, CSS, Bootstrap, MVC en .NET Core, Dapper ORM y JavaScript para bases de datos y vistas dinámicas.
+        titleCard: "Ingeniero de Desarrollo",
+        dondeYCuandoCard: "Innovaciones Tecnológicas IOTRI (2016-actual)",
+        textoCard: `Ingresé a IOTRI en 2016 como ingeniero de desarrollo y desde entonces he estado inmerso en un emocionante viaje de innovación tecnológica. Mi trabajo en IOTRI ha sido variado y desafiante, abarcando desde el diseño y la implementación de soluciones IoT hasta la colaboración en proyectos de investigación de vanguardia. Una de mis contribuciones más significativas ha sido liderar un equipo en el desarrollo de un sistema de monitorización ambiental basado en sensores IoT para aplicaciones agrícolas. Este proyecto no solo requirió habilidades técnicas sólidas en el diseño de hardware y software, sino también una comprensión profunda de los desafíos específicos del sector agrícola.
         <br>
-        En "Proyectos de Producción", guío a alumnos en la integración de sus conocimientos en un proyecto propio, destacando buenas prácticas de programación, trabajo en equipo, gestión de recursos y metodologías ágiles.
-        <br>
-        Como profesor de Diseño Web, priorizo el enfoque centrado en el usuario, UX, UI y Design Thinking con HTML, CSS para productos digitales significativos.
-        <br>
-        En "Bases de Datos" y "Tecnologías de la Información", complemento el estudio técnico con bases de hardware para soluciones informáticas acordes a las necesidades del cliente.`
+        Además de mi trabajo en proyectos específicos, he tenido el privilegio de colaborar con colegas de diversos campos y disciplinas en el Laboratorio de Desarrollo Tecnológico de IOTRI. Participar en discusiones interdisciplinarias y trabajar en proyectos conjuntos me ha permitido ampliar mis horizontes y explorar nuevas áreas de interés dentro de la tecnología. Me siento inspirado por el espíritu innovador y la pasión por la excelencia que impregna el ambiente de trabajo en IOTRI, y estoy emocionado por seguir contribuyendo al avance de la tecnología IoT y su impacto positivo en la sociedad.`
       },
       {
         imageCard: listaRutas.algorithm,
-        titleCard: "Profesor de Taller de Programación",
-        dondeYCuandoCard: "Instituto ORT. (2020-2021)",
-        textoCard: `Impartí conocimientos en el "Taller de Herramientas de Programación", abordando desde algoritmos simples en Java hasta programación orientada a objetos y estructuras de control, preparando a los estudiantes de nivel terciario para comprender las complejidades del desarrollo informático.`
+        titleCard: "Ingeniero de Investigación",
+        dondeYCuandoCard: "Laboratorio de Desarrollo Tecnológico IOTRI (2020-2021)",
+        textoCard: `Durante mi tiempo como ingeniero de investigación en el Laboratorio de Desarrollo Tecnológico de IOTRI, tuve la oportunidad de explorar nuevas fronteras en el mundo de la tecnología. Trabajando en estrecha colaboración con un equipo de científicos e ingenieros, participé en proyectos de vanguardia que abarcaban desde la inteligencia artificial hasta la robótica y la realidad aumentada. Utilizando herramientas y metodologías de vanguardia, como el aprendizaje automático y la simulación computacional, contribuí al desarrollo de soluciones innovadoras que tienen el potencial de transformar industrias enteras. Mi tiempo en el laboratorio no solo me permitió expandir mis habilidades técnicas, sino que también me inspiró a seguir persiguiendo la excelencia en la investigación y la innovación tecnológica.`
       }
     ]
 };
@@ -144,21 +134,14 @@ const ed = {
     title: "Educación",
     listaCards: [
       {
-        titleCard: "Licenciado en Sistemas",
-        dondeYCuandoCard: "Universidad de Palermo (2018-2020)",
-        textoCard: `Trabajo Final de Grado : "Bot Docente". Proyecto desarrollado en Python utilizando Telegram Bot API y librerías de IA, como SpaCy y NLTK. Despliegue de un bot conversacional disponible en la plataforma Telegram, como apoyo complementario a la labor docente.`
+        titleCard: "Bachiller Técnico en Informática",
+        dondeYCuandoCard: "Escuela Técnica ORT, Yatay, Buenos Aires (2016-actual)",
+        textoCard: `Actualmente cursando el último año de la secundaria con orientación en Informática en la prestigiosa Escuela Técnica ORT. Durante mi tiempo en la escuela, he adquirido una sólida base en informática y tecnología, así como habilidades prácticas en programación, diseño de sistemas y redes informáticas.`
       },
       {
-        titleCard: "Analista de Sistemas",
-        dondeYCuandoCard: "Instituto Tecnológico ORT (2013-2017)",
-        textoCard: `Proyecto Final destacado: Desarrollo de una aplicación web PHP para un emprendimiento de Yoga y Pilates.
-        <br>
-        Tecnologías: Symfony Framework (PHP), MySQL, Amazon Web Services`
-      },
-      {
-        titleCard: "Bachiller Técnico con orientación en Informática",
-        dondeYCuandoCard: "Escuela ORT (2007-2012)",
-        textoCard: `Proyecto final Destacado: Desarrollo de una aplicación desktop para la creación de partituras musicales utilizando la tecnología de Microsoft Kinect, en el framework .NET .`
+        titleCard: "Curso Avanzado en Desarrollo de Aplicaciones Móviles",
+        dondeYCuandoCard: "Instituto de Tecnología Digital (2023)",
+        textoCard: `Completé con éxito un curso avanzado en desarrollo de aplicaciones móviles ofrecido por el Instituto de Tecnología Digital. Durante el curso, adquirí habilidades especializadas en el diseño y desarrollo de aplicaciones para plataformas móviles, utilizando tecnologías como Flutter, React Native y Swift. Además, obtuve experiencia práctica en la creación de aplicaciones innovadoras y funcionales que cumplen con los estándares de calidad y usabilidad del mercado actual.`
       }
     ]
 };
@@ -173,14 +156,14 @@ const cont = {
     texto1: "Consultame lo que necesites a través del formulario o enviandome un mail a mi correo personal",
     texto2: "¡Gracias por visitar mi sitio web!",
     textoRowIzquierda: "Email:",
-    textoRowDerecha: "ezebinker@gmail.com",
+    textoRowDerecha: "47699554@est.ort.edu.ar",
     textoButton: "Enviar"
 };
 
 const footerComponent = {
-    title: "Ezequiel Binker",
-    texto: "Licenciado en Sistemas y Profesor de Programación",
-    textoDerechos: `©${new Date().getFullYear()} Ezequiel Binker. Todos los derechos reservados`,
+    title: "Tiago Shebar",
+    texto: "Estudiante de ORT Yatay",
+    textoDerechos: `©${new Date().getFullYear()} Tiago Shebar. Todos los derechos reservados`,
     linkButton: "#",
     textoButton: "Enviar"
 };

@@ -17,7 +17,7 @@ export const styles = {
     },
     image: {
         borderRadius: "50%",
-        width: "85%",
+        width: "40vh",
         height: "auto",
         alignSelf: "center"
     },

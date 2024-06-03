@@ -3,7 +3,7 @@ export const styles = {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        width: "70%",
+        width: "100%",
         margin: "0 auto",
         paddingTop: "2%"
     },
@@ -26,4 +26,11 @@ export const styles = {
         fontSize: "2.3rem", 
         fontWeight: "600"
     },
+    bloque: {
+        width: "100%",
+        display: "flex",
+        flexDirection: "row",
+        justifyContent: "space-between",
+        gap: "2%"
+    }
 };

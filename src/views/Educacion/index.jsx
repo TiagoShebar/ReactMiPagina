@@ -2,6 +2,7 @@ import Card from "../../components/Card";
 import {styles} from "./style";
 
 const Educacion = (props) => {
+    
     return (
         <>
         <div style={{backgroundColor: "#028391", marginTop: "-18%", paddingTop: "18%", paddingBottom:"7%"}}>

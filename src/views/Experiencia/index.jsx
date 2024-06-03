@@ -2,16 +2,29 @@ import Card from "../../components/Card";
 import {styles} from "./style";
 
 const Experiencia = (props) => {
+    const listaCards = props.listaCards || [];
+    const mitad = Math.ceil(listaCards.length / 2); // Calcula la mitad de la longitud de la lista
+
+    // Divide la lista en dos partes
+    const primeraMitad = listaCards.slice(0, mitad);
+    const segundaMitad = listaCards.slice(mitad);
     return (
         <>
         <div style={{backgroundColor: "#01204E", marginTop: "-18%", paddingTop: "17.5%", paddingBottom: "5%"}}>
             <h2 style={styles.title}>{props.titulo}</h2>
             <div style={styles.contenedorExterior}>
-                <div style={styles.contenedorInterior}>
-                        {props.listaCards.map((element, index) => (
-                            <Card style={styles.elemento} key={index} imagen={element.imageCard} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard}/>
-                        ))}
+            <div>
+                <div style={styles.bloque}>
+                    {primeraMitad.map((element, index) => (
+                        <Card key={index} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard} imagen={element.imageCard}/>
+                    ))}
                 </div>
+                <div style={styles.bloque}>
+                    {segundaMitad.map((element, index) => (
+                        <Card key={index} title={element.titleCard} dondeYCuando={element.dondeYCuandoCard} texto={element.textoCard} imagen={element.imageCard}/>
+                    ))}
+                </div>
+            </div>
             </div>
             
         </div>

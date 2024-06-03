@@ -3,7 +3,7 @@ export const styles = {
         borderRadius: "0.5em",
         boxShadow: "0 0.25em 0.5em rgba(0,0,0,0.1)",
         backgroundColor: "#fff",
-        width: "80%",
+        width: "50%",
         maxWidth: "600px",
         margin: "20px auto",
         padding: "2em",
